@@ -373,63 +373,36 @@ ws.onmessage = (event) => {
 ## 📁 Project Structure
 
 ```
-ransom-guard/
-├── frontend/                          # React application
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── FileUpload.tsx
-│   │   │   ├── AnalysisProgress.tsx
-│   │   │   ├── ResultsPanel.tsx
-│   │   │   └── Dashboard.tsx
-│   │   ├── services/
-│   │   │   ├── api.ts
-│   │   │   └── websocket.ts
-│   │   └── App.tsx
-│   ├── package.json
-│   └── vite.config.ts
+Ransom-Guard/
+├── src/                                
+│   ├── components/                     
+│   │   ├── Navigation.jsx              
+│   │   ├── Footer.jsx                  
+│   │   └── Login.jsx                   
+│   ├── config/
+│   │   └── firebase.js                 
+│   ├── context/
+│   │   └── AuthContext.jsx             
+│   ├── App.jsx                         
+│   ├── App.css                        
+│   ├── index.css                      
+│   └── main.jsx                       
 │
-├── backend/                           # FastAPI application
-│   ├── app/
-│   │   ├── main.py                   # Main FastAPI app
-│   │   ├── models/
-│   │   │   └── task.py               # Database models
-│   │   ├── workers/
-│   │   │   ├── static_worker.py      # Static analysis
-│   │   │   ├── dynamic_worker.py     # Dynamic analysis
-│   │   │   └── family_worker.py      # Family classification
-│   │   ├── services/
-│   │   │   ├── static_analysis.py
-│   │   │   ├── dynamic_analysis.py
-│   │   │   ├── cuckoo_client.py
-│   │   │   ├── behavioral_features.py
-│   │   │   └── family_classifier.py
-│   │   ├── ml_models/
-│   │   │   ├── static_model.pkl
-│   │   │   ├── dynamic_model.h5
-│   │   │   └── family_model.pkl
-│   │   └── core/
-│   │       ├── config.py
-│   │       ├── database.py
-│   │       └── celery_app.py
-│   ├── requirements.txt
-│   └── Dockerfile
+├── backend/                           
+│   └── main.py
 │
-├── ml_training/                       # ML Model Training
-│   ├── train_static_model.py
-│   ├── train_dynamic_model.py
-│   ├── train_family_classifier.py
-│   └── datasets/
+├── public/                            
+│   ├── Logo.svg                       
+│   ├── Light.svg / Dark.svg           
+│   └── up1.svg / up2.svg / not.svg    
 │
-├── scripts/                           # Utility scripts
-│   ├── train_models.py
-│   ├── setup_cuckoo.sh
-│   └── test_platform.py
-│
-├── docker-compose.yml                 # Docker orchestration
-├── docker-compose.prod.yml            # Production config
-├── .env.example                       # Environment template
-├── README.md                          # This file
-└── LICENSE
+├── .gitignore                         
+├── package.json                       
+├── vite.config.js                      
+├── FIREBASE_SETUP.md                   
+├── GITHUB_UPLOAD_ANALYSIS.md           
+├── README.md                           
+└── test_malicious_demo.exe             
 ```
 
 ---
